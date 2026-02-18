@@ -1,30 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <title>Joshua Stuart Johnson — Portfolio</title>
-  <meta name="description"
-    content="Personal portfolio of Joshua Stuart Johnson — Computer Science student, software developer, and maker." />
-
-  <!-- Fonts: Inter + JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
-
-  <!-- Favicon (simple emoji fallback) -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Johnson | Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Portfolio of Joshua Johnson, a software engineer specializing in web and mobile development.">
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Joshua.dev</a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Building Digital Experiences</h1>
+                <p>Hi, I'm Joshua Johnson. I'm a software engineer passionate about creating clean, efficient, and
+                    user focused applications.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="Assets/IMG_0018.JPG" alt="Joshua Johnson">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a dedicated developer with a strong foundation in computer science principles. I enjoy
+                        solving complex problems and turning ideas into reality through code.</p>
+                    <p>My journey in tech has led me to work with various technologies, from low-level systems to modern
+                        web and mobile frameworks. I'm always eager to learn and adapt to new challenges.</p>
+                    <p>In my spare time (when I can find it) I love to spend time with family and friends. I also
+                        love to read books, do many different hobbies, and I am currently learning to play guitar!
+
+                    <h3>Tech Stack</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">HTML & CSS</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+
+                    <h3>Databases</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Assets/appstore.png" alt="Mobile App Project"
+                            style="width: 50%; height: auto; object-fit: contain; border-radius: 20px;">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tech">
+                            <span>Swift</span>
+                            <span>SwiftUI</span>
+                            <span>RealityKit</span>
+                            <span>SwiftData</span>
+                            <span>iOS</span>
+                        </div>
+                        <h3>MuscleMap</h3>
+                        <p>An interactive workout tracking application with AR capabilities for visualizing muscle
+                            groups.</p>
+                        <a href="musclemap_details.html" class="btn btn-secondary"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 1rem;">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Assets/chessBotCoverPhoto.png" alt="Hardware Project"
+                            style="width: 50%; height: auto; object-fit: contain;">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Embedded</span>
+                        </div>
+                        <h3>Magic Self Playing Chess Robot</h3>
+                        <p>Chess robot that can play chess against a human player. Watch the video!</p>
+                        <a href="chessRobot.html" class="btn btn-secondary"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 1rem;">View Project</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's work together</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello.</p>
+            <div style="margin: 2rem 0;">
+                <a href="mailto:josh.johnson0388@gmail.com" class="btn btn-primary">Email Me</a>
+            </div>
+            <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

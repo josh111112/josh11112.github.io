@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuscleMap - Joshua Johnson</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Joshua.dev</a>
+                <div class="nav-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#projects">Projects</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Chess Robot</h1>
+                <p>A chess robot that can play chess against a human player.</p>
+                <p>Ever seen Harry Potter and the Sorcerer's Stone? </p>
+                <p>Remember when Harry, Ron, and Hermoine play chess against against this magical self moving chess
+                    set? Well, that's what this is
+                    like,
+                    just less violent.</p>
+                <div class="project-tech" style="justify-content: center; margin-bottom: 2rem;">
+                    <span>C++</span>
+                    <span>Embedded</span>
+                    <span>Arduino</span>
+                    <span>Ground up design from scratch</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <iframe class="video-embed" src="https://www.youtube.com/embed/6yIkqdkF7vs"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="about-text">
+                    <h2>Overview</h2>
+                    <p>Although she may not look and sound the prettiest, she's my baby.</p>
+                    <p>I created this out of a love for chess and I wanted a challenging project to work on in my free
+                        time.</p>
+
+                    <h3>Key Features</h3>
+                    <ul
+                        style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;">Built in C chess engine (up to 2000 elo!)</li>
+                        <li style="margin-bottom: 0.5rem;">Custom C++ algorithm for piece navigation</li>
+                        <li style="margin-bottom: 0.5rem;">Lots and lots of wires</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="project-content">
+        <div class="container">
+            <h2>Explaination</h2>
+            <p>I started off by just having a general idea of what I wanted to do.</p>
+            <p>The engineering process started with me using a whiteboard and sketching ideas of how I would create a
+                control arm to move the pieces.
+                It took many different iterations to finally arrive at a design that could accurately move to the
+                correct spot. From there the design process
+                turned to finding a surface that the 3D printed magnetic pieces could sit on while ensuring the magnetic
+                force was strong enough to pull a singular piece without
+                pulling multiple pieces when passing by them.</p>
+            <p>After the board was designed and all of the magnetic sensors attached to the bottom of the board, the
+                next step was to create the C++ code to control the arduino.</p>
+            <p>The code isn't the prettiest as it was my first time using C++ but I have learned a lot
+                during this process.</p>
+
+            <div>
+                <a href="https://github.com/josh111112/chess-robot" class="btn btn-primary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's work together</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello.</p>
+            <div style="margin: 2rem 0;">
+                <a href="mailto:contact@joshvajohnson.dev" class="btn btn-primary">Email Me</a>
+            </div>
+            <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
