@@ -1,104 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="script.js"></script>
-    <script src="matter.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Joshua Stuart Johnson — Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio of Joshua Stuart Johnson — Computer Science student, software developer, and maker." />
+
+  <!-- Fonts: Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon (simple emoji fallback) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>" />
 </head>
+
 <body>
-    <div class="floating-elements">
-        <div class="floating-item">
-            <img src="Assets/javascript.png" alt="javascript">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/python.png" alt="python">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/swift.png" alt="swift">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/c.png" alt="c">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/c++.png" alt="c++">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/java.png" alt="java">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/microcontroller.png" alt="microcontroller">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/asm.png" alt="assembly">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/camera.png" alt="camera">
-        </div>
-        <div class="floating-item">
-            <img src="Assets/app-store.png" alt="app-store">
-        </div>
-    </div>
-    <div class="bottom-line"></div>
-    <div class="scroll-arrows">
-        <img src="Assets/down-arrow.png" alt="Scroll down" class="scroll-arrow left-arrow">
-        <img src="Assets/down-arrow.png" alt="Scroll down" class="scroll-arrow right-arrow">
-    </div>
-    <div class="scroll-tracker">
-        <div class="tracker-line">x: <span id="x-pos"></span></div>
-        <div class="tracker-line">y: <span id="y-pos"></span></div>
-    </div>
-    <h2 class="greeting-text">Hi! I'm</h2>
-    <h1 class="fade-in-title">Joshua Johnson</h1>
-    <div class="social-links">
-        <a href="https://github.com/josh111112" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/joshua-johnson0388/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://leetcode.com/u/jojos_code/" target="_blank" aria-label="LeetCode">
-            <i class="fas fa-code"></i>
-        </a>
-    </div>
-    <a href="Assets/Joshua Johnson Resume.pdf" download class="resume-button">Download Resume</a>
-    
-    <div class="profile-images">
-        <img src="Assets/IMG_4976.JPG" alt="Profile Image 1" class="profile-image">
-        <img src="Assets/IMG_0304.JPG" alt="Profile Image 2" class="profile-image">
-    </div>
-    
-    <section class="projects-section">
-        <h2 class="projects-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Description of project 1 goes here.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank">View Demo</a>
-                    <a href="#" target="_blank">Source Code</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Description of project 2 goes here.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank">View Demo</a>
-                    <a href="#" target="_blank">Source Code</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Project 3</h3>
-                <p>Description of project 3 goes here.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank">View Demo</a>
-                    <a href="#" target="_blank">Source Code</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
