@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator - Joshua Johnson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">Joshua Johnson</a>
+                <div class="nav-links">
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Resume Generator</h1>
+                <p>Resume generator that generates a LaTeX resume based on the job description by looking at your
+                    skills file.</p>
+                <div class="project-tech" style="justify-content: center; margin-bottom: 2rem;">
+                    <span>Python</span>
+                    <span>LaTeX</span>
+                    <span>Gemini API</span>
+                    <span>Streamlit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image"></div>
+                <div class="about-text"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: left;">
+                    <h2>Overview</h2>
+                    <p>I've found it pretty time consuming to keep on editing each resume by hand for each job
+                        application. I didn't want to pay someone for their service so I built my own.
+                    </p>
+                    <p>The part that I find most useful is the skills file. You can list all of your projects and skills
+                        and it will choose only the applicable skills for the job posting. This way you don't have to
+                        remember what you did for each job posting.
+                    </p>
+
+                    <h3>Key Features</h3>
+                    <ul
+                        style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;">Generates a LaTeX resume based on the job description</li>
+                        <li style="margin-bottom: 0.5rem;">Chooses only the applicable skills for the job posting</li>
+                        <li style="margin-bottom: 0.5rem;">Uses Gemini API to generate the resume</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div>
+                <a href="https://github.com/josh111112/ResumeWrapper" class="btn btn-primary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's work together</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello.</p>
+            <div style="margin: 2rem 0;">
+                <a href="mailto:contact@joshvajohnson.dev" class="btn btn-primary">Email Me</a>
+            </div>
+            <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
