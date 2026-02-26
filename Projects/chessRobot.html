@@ -112,7 +112,18 @@
             <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Mouse Coordinates Display -->
+    <div id="mouse-coords"
+        style="position: fixed; bottom: 10px; left: 10px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px; font-family: monospace; font-size: 14px; z-index: 9999; pointer-events: none;">
+        X: 0, Y: 0
+    </div>
 
+    <script>
+        const coordsDisplay = document.getElementById('mouse-coords');
+        document.addEventListener('mousemove', (event) => {
+            coordsDisplay.textContent = `X: ${event.clientX}, Y: ${event.clientY}`;
+        });
+    </script>
 </body>
 
 </html>
