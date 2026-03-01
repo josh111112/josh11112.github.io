@@ -45,13 +45,20 @@
     <section class="project-details">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image"></div>
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <video autoplay loop muted playsinline
+                        style="width: 100%; height: auto; aspect-ratio: 16/9; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); border-radius: 12px;">
+                        <source src="../Assets/resumeVideoDemo.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <div class="about-text"
                     style="display: flex; flex-direction: column; align-items: center; text-align: left;">
                     <h2>Overview</h2>
                     <p>I've found it pretty time consuming to keep on editing each resume by hand for each job
                         application. I didn't want to pay someone for their service so I built my own.
                     </p>
+
                     <p>The part that I find most useful is the skills file. You can list all of your projects and skills
                         and it will choose only the applicable skills for the job posting. This way you don't have to
                         remember what you did for each job posting.
@@ -87,18 +94,6 @@
             <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
         </div>
     </footer>
-    <!-- Mouse Coordinates Display -->
-    <div id="mouse-coords"
-        style="position: fixed; bottom: 10px; left: 10px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px; font-family: monospace; font-size: 14px; z-index: 9999; pointer-events: none;">
-        X: 0, Y: 0
-    </div>
-
-    <script>
-        const coordsDisplay = document.getElementById('mouse-coords');
-        document.addEventListener('mousemove', (event) => {
-            coordsDisplay.textContent = `X: ${event.clientX}, Y: ${event.clientY}`;
-        });
-    </script>
 </body>
 
 </html>

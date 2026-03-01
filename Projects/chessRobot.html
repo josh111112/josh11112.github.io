@@ -54,9 +54,10 @@
     <section class="project-details">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image">
-                    <iframe class="video-embed" src="https://www.youtube.com/embed/6yIkqdkF7vs"
-                        title="YouTube video player"
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <iframe class="video-embed"
+                        style="width: 100%; height: auto; aspect-ratio: 16/9; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);"
+                        src="https://www.youtube.com/embed/6yIkqdkF7vs" title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
@@ -112,18 +113,6 @@
             <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
         </div>
     </footer>
-    <!-- Mouse Coordinates Display -->
-    <div id="mouse-coords"
-        style="position: fixed; bottom: 10px; left: 10px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px; font-family: monospace; font-size: 14px; z-index: 9999; pointer-events: none;">
-        X: 0, Y: 0
-    </div>
-
-    <script>
-        const coordsDisplay = document.getElementById('mouse-coords');
-        document.addEventListener('mousemove', (event) => {
-            coordsDisplay.textContent = `X: ${event.clientX}, Y: ${event.clientY}`;
-        });
-    </script>
 </body>
 
 </html>
