@@ -1,157 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Johnson | Portfolio</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    <meta name="description"
-        content="Portfolio of Joshua Johnson, a software engineer specializing in web and mobile development.">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beverage Maker</title>
+  <script type="module" crossorigin src="/assignment2-josh111112/assets/index-CU98irYn.js"></script>
+  <link rel="stylesheet" crossorigin href="/assignment2-josh111112/assets/index-Cz820B2R.css">
 </head>
 
 <body>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">Joshua Johnson</a>
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </nav>
+  <div id="app">
+    <div>
+      <div class="mug">
+        <div id="condensation">
+          <div class="flake"></div>
+          <div class="flake"></div>
+          <div class="flake"></div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Building Digital Experiences</h1>
-                <p>Hi, I'm Joshua Johnson. I'm a software developer passionate about creating clean, efficient, and
-                    user focused applications.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-            </div>
+        <div class="carafe">
+          <div class="froth">
+            <div class="foam"></div>
+            <div class="foam"></div>
+            <div class="foam"></div>
+            <div class="foam"></div>
+            <div class="foam"></div>
+          </div>
+
+          <div class="syrup"></div>
+          <div class="base"></div>
         </div>
-    </section>
+      </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="Assets/IMG_0018.JPG" alt="Joshua Johnson">
-                </div>
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I am a developer who genuinely enjoys the problem solving aspect of computer science. I'm always
-                        picking up something new trying to learn the million billion technologies out there.
-                    </p>
-                    <p>My experience spans low level systems to modern web and mobile. I pick up new tools quickly and
-                        don't mind being thrown into unfamiliar territory.
-                    </p>
-                    <p>In my spare time (when I can find it) I love to spend time with family and friends. I also
-                        love to read books, do many different hobbies, and I am currently learning to play guitar!
-                    </p>
-                    <p>
-                        I am currently looking for full time opportunities in the software field. If you are interested
-                        in working with me, please feel free to reach out!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="Assets/appstore.png" alt="Mobile App Project"
-                            style="width: 50%; height: auto; object-fit: contain; border-radius: 20px;">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tech">
-                            <span>Swift</span>
-                            <span>SwiftUI</span>
-                            <span>RealityKit</span>
-                            <span>SwiftData</span>
-                            <span>iOS</span>
-                        </div>
-                        <h3>MuscleMap</h3>
-                        <p>An interactive workout tracking application with AR capabilities for visualizing muscle
-                            groups.</p>
-                        <a href="Projects/musclemap.html" class="btn btn-secondary"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 1rem;">View Project</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="Assets/chessRobotGif.gif" alt="GIF of chess robot" width="600">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tech">
-                            <span>C++</span>
-                            <span>Embedded</span>
-                            <span>ROS</span>
-                        </div>
-                        <h3>Magic Self Playing Chess Robot</h3>
-                        <p>Chess robot that can play chess against a human player. Watch the video!</p>
-                        <a href="Projects/chessRobot.html" class="btn btn-secondary"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 1rem;">View Project</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="Assets/resumeGeneratorGif.gif" alt="GIF of resume generator" width="600">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Streamlit</span>
-                            <span>LaTeX</span>
-                            <span>Gemini</span>
-                        </div>
-                        <h3>Resume Generator</h3>
-                        <p>Resume generator that generates a LaTeX resume based on the job description by looking at
-                            your skills file.</p>
-                        <a href="Projects/resumeGenerator.html" class="btn btn-secondary"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 1rem;">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <h2>Let's work together</h2>
-            <p>Feel free to reach out for collaborations or just a friendly hello.</p>
-            <div style="margin: 2rem 0;">
-                <a href="mailto:josh.johnson0388@gmail.com" class="btn btn-primary">Email Me</a>
-            </div>
-        </div>
-    </footer>
+      <ul>
+        <li>
+          <label class="choice">
+            <input type="radio" name="temperature" value="hot" checked />
+            <span class="pill">Hot</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="temperature" value="cold" checked />
+            <span class="pill">Cold</span>
+          </label>
+        </li>
+        <li>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="base" value="blackTea" checked />
+              <span class="pill swatch">Black Tea</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="base" value="greenTea" />
+              <span class="pill swatch">Green Tea</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="base" value="coffee" />
+              <span class="pill swatch">Coffee</span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="cream" value="milk" checked />
+              <span class="pill swatch">Milk</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="cream" value="cream" />
+              <span class="pill swatch">Cream</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="cream" value="half" />
+              <span class="pill swatch">Half & Half</span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="syrup" value="vanilla" />
+              <span class="pill swatch">Vanilla</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="syrup" value="caramel" checked />
+              <span class="pill swatch">Caramel</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="syrup" value="hazelnut" />
+              <span class="pill swatch">Hazelnut</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 
 </html>
