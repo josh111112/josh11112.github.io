@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Othello AI - Joshua Johnson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">Joshua Johnson</a>
+                <div class="nav-links">
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Othello AI</h1>
+                <p>An intelligent game-playing bot implementing minimax search, alpha-beta pruning, iterative deepening,
+                    and advanced move ordering heuristics to compete in high-performance tournaments.</p>
+                <div class="project-tech" style="justify-content: center; margin-bottom: 2rem;">
+                    <span>Python</span>
+                    <span>Algorithms</span>
+                    <span>Minimax</span>
+                    <span>Alpha-Beta Pruning</span>
+                    <span>Game Theory</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div class="about-grid">
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <video src="../Assets/OthelloGameplayVideo.mp4" autoplay loop muted playsinline
+                        style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); border-radius: 12px;"></video>
+                </div>
+                <div class="about-text"
+                    style="display: flex; flex-direction: column; align-items: start; text-align: left;">
+                    <h2>Overview</h2>
+                    <p>Othello (Reversi) is an 8x8 grid-based board game. Players take turns placing discs of their
+                        color. If an opponent's discs are sandwiched between the newly placed disc and another of the
+                        active player's discs in any straight line (horizontal, vertical, or diagonal), those discs are
+                        flipped. The game ends when neither player has legal moves, and the player with the most discs
+                        wins.</p>
+
+                    <p>I built this zero-dependency <strong>Othello AI</strong> to compete under tight execution limits
+                        (typically 1.5 seconds per move). The engine constructs a virtual game tree of possible future
+                        board configurations, evaluates their strategic values, and makes optimal moves against an
+                        active opponent using game-theoretic search algorithms.</p>
+
+                    <h3>Core Architecture</h3>
+                    <ul
+                        style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Minimax with Alpha-Beta Pruning (Branch &
+                                Bound):</strong> Computes optimal decisions by maximizing the player's advantage while
+                            assuming the opponent acts to minimize it. Alpha-beta pruning cuts off branches that cannot
+                            affect the final decision, preventing redundant work.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Iterative Deepening:</strong> Rather than searching
+                            to a fixed depth, the bot searches depth-by-depth (depth 1, then depth 2, etc.). This
+                            ensures a valid move is always ready, regardless of the remaining time.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Exception-Based Time Management:</strong> Uses a
+                            high-precision timer. If the turn limit is reached, a custom <code>SearchTimeout</code> is
+                            raised, aborting the active search level and falling back to the completed move from the
+                            previous depth.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-features" style="background-color: var(--bg-secondary); padding: 4rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Search & Branching Optimizations</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">⚡ Move Ordering (Pruning Booster)</h3>
+                    <p>Alpha-beta pruning efficiency is highly dependent on move evaluation order. By sorting legal
+                        moves based on static board weights before entering search, the bot checks the most promising
+                        branches first. This leads to immediate cutoffs, reducing the search space from O(b<sup>d</sup>)
+                        towards the theoretical limit of O(b<sup>d/2</sup>).</p>
+                </div>
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">♟️ Multi-Factor Heuristic Matrix</h3>
+                    <p>Uses a custom heuristic weighting matrix to evaluate board squares. Corners (which can never be
+                        flipped) are heavily prioritized (+100). Conversely, squares adjacent to empty corners (C & X
+                        squares) are penalized (-20 to -40) because they grant the opponent corner access.</p>
+                </div>
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">🎛️ Dynamic Mobility & Parity</h3>
+                    <p>Early game success is about limiting opponent choices (mobility) rather than acquiring pieces.
+                        The bot calculates mobility dynamically to restrict opponent moves. During the endgame (last 10
+                        empty squares), it scales up the parity weight from 1 to 5 to prioritize outright coin count for
+                        victory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Search Implementation</h2>
+            <div
+                style="background-color: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden;">
+                <div
+                    style="background-color: rgba(255,255,255,0.03); padding: 0.75rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: monospace; font-size: 0.9rem; color: var(--text-secondary);">client.py
+                        (Minimax Implementation)</span>
+                </div>
+                <pre
+                    style="margin: 0; padding: 1.5rem; overflow-x: auto; font-family: monospace; font-size: 0.85rem; line-height: 1.5; color: #e0e0e0; text-align: left;"><code>def minimax(self, state: GameState, depth: int, alpha: float, beta: float, maximizing: bool, player: int, initial_player: int) -> float:
+    if time.time() > self.end_time:
+        raise SearchTimeout()
+
+    self.nodes_evaluated += 1
+    opponent = 2 if player == 1 else 1
+    moves = self.get_valid_moves_sorted(state, player)  # Optimizes Alpha-Beta via Move Ordering
+
+    if depth == 0:
+        return self.evaluate_board(state, initial_player)
+
+    if not moves:
+        opponent_moves = state.get_valid_moves(opponent)
+        if not opponent_moves:
+            return self.evaluate_board(state, initial_player)
+        return self.minimax(state, depth - 1, alpha, beta, not maximizing, opponent, initial_player)
+
+    if maximizing:
+        max_eval = float('-inf')
+        for move in moves:
+            new_state = state.make_move(move, player)
+            eval_score = self.minimax(new_state, depth - 1, alpha, beta, False, opponent, initial_player)
+            max_eval = max(max_eval, eval_score)
+            alpha = max(alpha, eval_score)
+            if beta <= alpha:
+                break  # Branch and bound pruning
+        return max_eval
+    else:
+        min_eval = float('inf')
+        for move in moves:
+            new_state = state.make_move(move, player)
+            eval_score = self.minimax(new_state, depth - 1, alpha, beta, True, opponent, initial_player)
+            min_eval = min(min_eval, eval_score)
+            beta = min(beta, eval_score)
+            if beta <= alpha:
+                break  # Branch and bound pruning
+        return min_eval</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container" style="text-align: center; padding: 4rem 0;">
+            <h2 style="margin-bottom: 1.5rem;">Source Code</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto;">Explore the minimax implementation, state space
+                generation, heuristic weights, and unit tests directly in the GitHub repository.</p>
+            <div>
+                <a href="https://github.com/josh111112/AOthello" class="btn btn-primary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's work together</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello.</p>
+            <div style="margin: 2rem 0;">
+                <a href="mailto:josh.johnson0388@gmail.com" class="btn btn-primary">Email Me</a>
+            </div>
+            <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

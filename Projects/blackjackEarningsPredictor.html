@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack & Casino Earnings Predictor - Joshua Johnson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">Joshua Johnson</a>
+                <div class="nav-links">
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Blackjack & Casino Earnings Predictor</h1>
+                <p>A Monte Carlo simulation tool that models blackjack wagering requirements, house rules, and betting
+                    strategies to evaluate the expected value (EV) of casino promotions.</p>
+                <div class="project-tech" style="justify-content: center; margin-bottom: 2rem;">
+                    <span>Python</span>
+                    <span>Monte Carlo Simulation</span>
+                    <span>Multiprocessing</span>
+                    <span>NumPy</span>
+                    <span>Matplotlib</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div class="about-grid">
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <img src="../Assets/blackjackPredictorCover.png" alt="Blackjack Simulation Dashboard"
+                        style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); border-radius: 12px;">
+                </div>
+                <div class="about-text"
+                    style="display: flex; flex-direction: column; align-items: start; text-align: left;">
+                    <h2>Overview</h2>
+                    <p>Many online casinos offer promotions like <em>"50% deposit match up to $250"</em>, but these
+                        bonuses come with wagering requirements that must be met before withdrawing. Because games like
+                        blackjack often contribute only 10-20% toward these targets, a player must wager thousands of
+                        dollars to clear a small bonus.
+                    </p>
+
+                    <p>I built the <strong>Casino Earnings Predictor</strong> to simulate millions of blackjack hands
+                        using Monte Carlo methods to help players determine whether a promotion is mathematically
+                        positive expected value (+EV) or a statistical trap.
+                    </p>
+
+                    <h3>Key Simulation Modules</h3>
+                    <ul
+                        style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Playthrough Simulator
+                                (<code>simulate_playthrough.py</code>):</strong> Models sessions targeting a specific
+                            wager threshold to calculate risk of ruin (bust rate), average hands needed to clear, and
+                            hourly win rate.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Bankroll Simulator
+                                (<code>simulate_bankroll.py</code>):</strong> Compares betting strategies (e.g.,
+                            withdrawing immediately vs. churning credits) to visualize bankroll variance.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-features" style="background-color: var(--bg-secondary); padding: 4rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Technical Highlights</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">⚡ Parallel Engine</h3>
+                    <p>Utilizes Python's <code>multiprocessing</code> library to distribute simulation sessions across
+                        all available CPU cores. This allows the simulator to model over 100,000 gaming sessions
+                        (millions of individual hands) in seconds.</p>
+                </div>
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">⚙️ Rule Customization</h3>
+                    <p>Features a custom blackjack rule engine configuring deck count, split rules, double-down options,
+                        late surrender, and dealer behavior (hitting or standing on soft 17) to match exact online
+                        casino rules.</p>
+                </div>
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">📈 Visual Analytics</h3>
+                    <p>Generates detailed visual dashboards using NumPy and Matplotlib, plotting standard deviation
+                        curves, bankroll progression paths, and expected profit distributions to illustrate risk vs.
+                        reward.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container" style="text-align: center; padding: 4rem 0;">
+            <h2 style="margin-bottom: 1.5rem;">Source Code</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto;">Explore the simulation scripts, strategy charts, and
+                rule configs directly in the GitHub repository.</p>
+            <div>
+                <a href="https://github.com/josh111112/Blackjack-Earnings-Predictor" class="btn btn-primary">View on
+                    GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's work together</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello.</p>
+            <div style="margin: 2rem 0;">
+                <a href="mailto:contact@joshvajohnson.dev" class="btn btn-primary">Email Me</a>
+            </div>
+            <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

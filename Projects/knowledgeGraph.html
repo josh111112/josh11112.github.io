@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Knowledge Graph Assistant - Joshua Johnson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">Joshua Johnson</a>
+                <div class="nav-links">
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Research Knowledge Graph Assistant</h1>
+                <p>An AI-powered search assistant utilizing GraphRAG (Neo4j & Gemini) to route queries, translate natural language into Cypher queries, and summarize data fusion literature.</p>
+                <div class="project-tech" style="justify-content: center; margin-bottom: 2rem;">
+                    <span>Python</span>
+                    <span>Neo4j</span>
+                    <span>Flask</span>
+                    <span>GraphRAG</span>
+                    <span>Gemini API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div class="about-grid">
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <img src="../Assets/knowledgeGraphCover.png" alt="Knowledge Graph Visualization"
+                        style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); border-radius: 12px;">
+                </div>
+                <div class="about-text"
+                    style="display: flex; flex-direction: column; align-items: start; text-align: left;">
+                    <h2>Overview</h2>
+                    <p>Academic literature search can be challenging when trying to connect research papers, the specific datasets they use, and the data fusion methods applied. Typical semantic search databases often miss highly structured connections and dependencies.
+                    </p>
+
+                    <p>I built the <strong>Research Knowledge Graph Assistant</strong> to model academic literature in a structured format and provide a conversational interface over it. The graph connects Paper, Dataset, and FusionMethod nodes, enabling users to ask complex questions in plain English rather than formulating database queries.
+                    </p>
+
+                    <h3>Key System Modules</h3>
+                    <ul
+                        style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Intent Classification Router (<code>app.py</code>):</strong> Classifies user inputs using Gemini as either conversational ("GENERAL") or database queries ("DATABASE") to optimize query latency.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Graph Database Importer (<code>import_data.py</code>):</strong> Ingests tabular CSVs of papers, datasets, and methods, merging them into Neo4j with structured relations such as <code>USES_METHOD</code> and <code>APPLIED_TO</code>.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Text-to-Cypher retriever (<code>main.py</code>):</strong> Leverages the <code>neo4j-graphrag</code> library to translate natural language inquiries into Cypher queries based on the database schema and few-shot examples.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-features" style="background-color: var(--bg-secondary); padding: 4rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Technical Highlights</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">🌐 Graph Database Schema</h3>
+                    <p>Designed a structured schema linking papers, datasets, and fusion methods. This allows multi-hop relational queries such as finding datasets commonly fused together or identifying specific uncertainty parameters reported by research papers.</p>
+                </div>
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">⚙️ Text-to-Cypher Engine</h3>
+                    <p>Translates complex graph searches dynamically from natural language. By feeding the database schema and few-shot examples to Gemini, the engine dynamically translates queries into optimized Cypher matching node labels, properties, and relationships.</p>
+                </div>
+                <div class="project-card" style="padding: 2rem; background-color: var(--bg-card);">
+                    <h3 style="color: var(--accent-color); margin-bottom: 1rem;">🤖 Intelligent AI Router</h3>
+                    <p>Implements an AI router that detects user intent. Casual conversation is answered directly by Gemini, while factual queries are automatically translated into Cypher queries, executed on Neo4j, and summarized back to the user with graph-sourced context.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container" style="text-align: center; padding: 4rem 0;">
+            <h2 style="margin-bottom: 1.5rem;">Source Code</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto;">Explore the importer scripts, text-to-cypher prompts, and Flask app configuration directly in the GitHub repository.</p>
+            <div>
+                <a href="https://github.com/josh111112/Knowledge-Graph" class="btn btn-primary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's work together</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello.</p>
+            <div style="margin: 2rem 0;">
+                <a href="mailto:josh.johnson0388@gmail.com" class="btn btn-primary">Email Me</a>
+            </div>
+            <p>&copy; 2026 Joshua Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
